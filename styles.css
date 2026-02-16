@@ -1,0 +1,110 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 5%, #1e2742 0%, #070b13 50%, #020205 100%);
+  color: #eef2ff;
+}
+
+#scene {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(450px, 92vw);
+  margin: 14px;
+  padding: 14px;
+  border: 1px solid rgba(145, 173, 255, 0.26);
+  border-radius: 12px;
+  background: rgba(4, 8, 20, 0.62);
+  backdrop-filter: blur(8px);
+  z-index: 4;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.brand p {
+  margin: 4px 0 10px;
+  font-size: 0.87rem;
+  color: #bfccf5;
+}
+
+.controls {
+  display: grid;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #d9e5ff;
+  margin-bottom: 10px;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: end;
+  margin-bottom: 10px;
+}
+
+.panel label {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: #b8c6f3;
+}
+
+select,
+button {
+  background: rgba(9, 16, 36, 0.85);
+  border: 1px solid rgba(138, 177, 255, 0.38);
+  color: #ecf2ff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: rgba(173, 199, 255, 0.7);
+}
+
+#statusLine,
+#bodyInfo {
+  min-height: 2.3em;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #d3defc;
+}
+
+#bodyInfo {
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(128, 157, 235, 0.45);
+}
+
+#spaceshipIcon {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  filter: drop-shadow(0 0 8px rgba(112, 181, 255, 0.85));
+  z-index: 6;
+  user-select: none;
+}
